@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kamień, papier, nożyce</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata%26family=Signika:wght@700%26display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
-		<div id="buttons"></div>
-			<button id="play-paper">Papier</button>
-			<button id="play-scissors">Nożyce</button>
-			<button id="play-stone">Kamień</button>
-		<div id="messages"></div>
+		<div class="buttons" id="buttons">
+			<h1>Witaj! Czy chcesz ze mną zagrać?</h1>
+			<h2>Proponuję grę w Papier Nożyce Kamień.</h2>
+			<p>Zapewne znasz starą grę w papier, nozyce i kamień? Jeżeli się nudzisz możemy zagrać.</p>
+			<p>Zagrajmy do dziesięciu wygranych. Twój ruch będzie polegał na kliknieciu jednego z przycisków poniżej.</p>
+			<div class="ruch">
+				<a class="btn btn-one" href="#" id="play-paper"><i class="fas fa-toilet-paper"></i>&nbsp;</a>
+				<a class="btn btn-one" href="#" id="play-scissors"><i class="fas fa-cut"></i>&nbsp;</a>
+				<a class="btn btn-one" href="#" id="play-stone"><i class="fas fa-gem"></i>&nbsp;</a>
+			</div>
+		</div>
+		<div class="messages" id="messages">
+
+		</div>
+		<div class="restart">
+			<a class="btn btn-two" href="#" id="restart">Od nowa</a>
+		</div>
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>

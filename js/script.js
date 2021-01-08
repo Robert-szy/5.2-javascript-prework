@@ -19,23 +19,104 @@ function playGame (playerInput){
         printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 
         if ( argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
-            printMessage('Ty wygrywasz!');
+            printMessage('Wygrywasz rundę!');
+            playerCount = playerCount + 1;
+            printMessage('Twój wynik: ' + playerCount + ' - Mój wynik: ' + computerCount);
+            if (playerCount == 10) {
+                printMessage ('BRAWO! WYGRAŁEŚ!');
+                playerCount = 0;
+                computerCount = 0;
+                return;
+            } else if (computerCount == 10) {
+                printMessage ('TYM RAZEM JA WYGRAŁEM!');
+                playerCount = 0;
+                computerCount = 0;
+                return;
+            }
         } else if ( argComputerMove == 'papier' && argPlayerMove == 'kamień') {
-            printMessage('Ja wygrywam!');
+            printMessage('Wygrywam rundę!');
+            computerCount = computerCount + 1;
+            printMessage('Twój wynik: ' + playerCount + ' - Mój wynik: ' + computerCount);
+            if (playerCount == 10) {
+                printMessage ('BRAWO! WYGRAŁEŚ!');
+                playerCount = 0;
+                computerCount = 0;
+                return;
+            } else if (computerCount == 10) {
+                printMessage ('TYM RAZEM JA WYGRAŁEM!');
+                playerCount = 0;
+                computerCount = 0;
+                return;
+            }
         } else if ( argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
-            printMessage('Ja wygrywam!');
+            printMessage('Wygrywam rundę!');
+            computerCount = computerCount + 1;
+            printMessage('Twój wynik: ' + playerCount + ' - Mój wynik: ' + computerCount);
+            if (playerCount == 10) {
+                printMessage ('BRAWO! WYGRAŁEŚ!');
+                playerCount = 0;
+                computerCount = 0;
+                return;
+            } else if (computerCount == 10) {
+                printMessage ('TYM RAZEM JA WYGRAŁEM!');
+                playerCount = 0;
+                computerCount = 0;
+                return;
+            }
         } else if ( argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
-            printMessage('Ty wygrywasz!');
+            printMessage('Wygrywasz rundę!');
+            playerCount = playerCount + 1;
+            printMessage('Twój wynik: ' + playerCount + ' - Mój wynik: ' + computerCount);
+            if (playerCount == 10) {
+                printMessage ('BRAWO! WYGRAŁEŚ!');
+                playerCount = 0;
+                computerCount = 0;
+                return;
+            } else if (computerCount == 10) {
+                printMessage ('TYM RAZEM JA WYGRAŁEM!');
+                playerCount = 0;
+                computerCount = 0;
+                return;
+            }
         } else if ( argComputerMove == 'kamień' && argPlayerMove == 'papier') {
-            printMessage('Ty wygrywasz!');
+            printMessage('Wygrywasz rundę!');
+            playerCount = playerCount + 1;
+            printMessage('Twój wynik: ' + playerCount + ' - Mój wynik: ' + computerCount);
+            if (playerCount == 10) {
+                printMessage ('BRAWO! WYGRAŁEŚ!');
+                playerCount = 0;
+                computerCount = 0;
+                return;
+            } else if (computerCount == 10) {
+                printMessage ('TYM RAZEM JA WYGRAŁEM!');
+                playerCount = 0;
+                computerCount = 0;
+                return;
+            }
         } else if ( argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
-            printMessage('Ja wygrywam!');
+            printMessage('Wygrywam rundę!');
+            computerCount = computerCount + 1;
+            printMessage('Twój wynik: ' + playerCount + ' - Mój wynik: ' + computerCount);
+            if (playerCount == 10) {
+                printMessage ('BRAWO! WYGRAŁEŚ!');
+                playerCount = 0;
+                computerCount = 0;
+                return;
+            } else if (computerCount == 10) {
+                printMessage ('TYM RAZEM JA WYGRAŁEM!');
+                playerCount = 0;
+                computerCount = 0;
+                return;
+            }
         } else if ( argComputerMove == 'papier' && argPlayerMove == 'papier') {
             printMessage('Remis!');
+            printMessage('Twój wynik: ' + playerCount + ' - Mój wynik: ' + computerCount);
         } else if ( argComputerMove == 'nożyce' && argPlayerMove == 'nożyce') {
             printMessage('Remis!');
+            printMessage('Twój wynik: ' + playerCount + ' - Mój wynik: ' + computerCount);
         } else if ( argComputerMove == 'kamień' && argPlayerMove == 'kamień') {
             printMessage('Remis!');
+            printMessage('Twój wynik: ' + playerCount + ' - Mój wynik: ' + computerCount);
         } else {
             printMessage('Powtórz swój ruch!')
         }
@@ -50,6 +131,9 @@ function playGame (playerInput){
 
     displayResult (computerMove, playerMove);
 }
+
+let playerCount = 0;
+let computerCount = 0;
 
 document.getElementById('play-paper').addEventListener('click', function(){
     printMessage('Kliknięty przycisk Papier');
@@ -66,4 +150,9 @@ document.getElementById('play-stone').addEventListener('click', function(){
     playGame(3)
 });
  
+document.getElementById('restart').addEventListener('click', function(){
+    clearMessages();
+    playerCount = 0;
+    computerCount = 0;
+});
   
