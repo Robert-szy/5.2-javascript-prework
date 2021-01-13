@@ -1,21 +1,21 @@
 {
-function playGame (playerInput){
+const playGame = function (playerInput){
     clearMessages();
-    function getMoveName(argMoveId){
+    const getMoveName = function (argMoveId) {
         console.log('argMoveID:', argMoveId);
-        if(argMoveId == 1){
-        return 'papier';
+        if (argMoveId == 1) {
+            return 'papier';
         } else if (argMoveId == 2) {
             return 'nożyce';
-            } else if (argMoveId == 3) {
+        } else if (argMoveId == 3) {
             return 'kamień';
         } else {
-          printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-        return 'nieznany ruch';
+            printMessage('Nie znam ruchu o id ' + argMoveId + '.');
+            return 'nieznany ruch';
         }
     }
   
-    function displayResult(argComputerMove, argPlayerMove){
+    const displayResult = function (argComputerMove, argPlayerMove){
         console.log('argComputerMove:', argComputerMove, 'argPlayerMove:', argPlayerMove);
         printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 
