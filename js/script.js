@@ -1,3 +1,4 @@
+{
 function playGame (playerInput){
     clearMessages();
     function getMoveName(argMoveId){
@@ -155,4 +156,4 @@ document.getElementById('restart').addEventListener('click', function(){
     playerCount = 0;
     computerCount = 0;
 });
-  
+}
